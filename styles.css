@@ -1,0 +1,149 @@
+:root {
+  --canvas-bg: #dcdcdc;
+  --screen-bg-1: #f5f2ee;
+  --screen-bg-2: #f2efeb;
+  --screen-bg-3: #f0ece7;
+  --screen-bg-4: #ede9e4;
+  --screen-bg-5: #ebe6e0;
+  --screen-bg-6: #e8e3dd;
+  --text-primary: #3a3838;
+  --text-secondary: #878280;
+  --accent-soft: #d4b5a8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Microsoft YaHei", "Noto Sans SC", "PingFang SC", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--canvas-bg);
+}
+
+.canvas {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.screen {
+  width: min(402px, 100vw);
+  height: max(874px, 100vh);
+  padding: 32px 18px;
+  background: linear-gradient(
+    180deg,
+    var(--screen-bg-1) 0%,
+    var(--screen-bg-2) 20%,
+    var(--screen-bg-3) 40%,
+    var(--screen-bg-4) 60%,
+    var(--screen-bg-5) 80%,
+    var(--screen-bg-6) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 212px;
+}
+
+.icon-wrap {
+  width: 129px;
+  height: 129px;
+  position: relative;
+}
+
+.icon-orb {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: rgba(212, 181, 168, 0.2);
+  filter: blur(64px);
+}
+
+.icon-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  border: 1px solid rgba(200, 195, 190, 0.25);
+  background: rgba(255, 255, 255, 0.51);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-heart {
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+
+.title {
+  margin: 33px 0 12px;
+  color: var(--text-primary);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+  text-align: center;
+}
+
+.primary-btn {
+  width: 100%;
+  max-width: 366px;
+  height: 56px;
+  border: 0;
+  border-radius: 20px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  background: var(--accent-soft);
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 430px) {
+  .screen {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .content {
+    padding-top: 180px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .primary-btn {
+    font-size: 16px;
+  }
+}
