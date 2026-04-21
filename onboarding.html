@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>情侣吵架复盘 - Onboarding</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./onboarding.css" />
+  </head>
+  <body>
+    <div class="canvas">
+      <main class="screen onboarding-screen" aria-label="情侣吵架复盘App首次引导">
+        <header class="onboarding-header">
+          <a class="text-link skip-link" href="./home.html">跳过</a>
+        </header>
+
+        <section class="slides" aria-live="polite">
+          <article class="slide is-active" data-index="0">
+            <div class="slide-visual visual-a" aria-hidden="true">
+              <span class="glass-shape"></span>
+              <span class="glass-shape"></span>
+            </div>
+            <h1 class="slide-title">记录争吵，不让情绪模糊事实</h1>
+            <p class="slide-copy">
+              先记录发生了什么，再整理双方说了什么，
+              <br />
+              让复盘有清晰锚点。
+            </p>
+          </article>
+
+          <article class="slide" data-index="1" aria-hidden="true">
+            <div class="slide-visual visual-b" aria-hidden="true">
+              <span class="glass-shape"></span>
+              <span class="glass-shape"></span>
+            </div>
+            <h2 class="slide-title">看见彼此视角，而非坚持自己</h2>
+            <p class="slide-copy">
+              同一件事，可以有两种感受。
+              <br />
+              我们帮你把双方需求摆在同一张桌面上。
+            </p>
+          </article>
+
+          <article class="slide" data-index="2" aria-hidden="true">
+            <div class="slide-visual visual-c" aria-hidden="true">
+              <span class="glass-shape"></span>
+              <span class="glass-shape"></span>
+            </div>
+            <h2 class="slide-title">温和输出结论与修复建议</h2>
+            <p class="slide-copy">
+              不站队，不指责，
+              <br />
+              只给可执行的下一步行动。
+            </p>
+          </article>
+
+          <article class="slide" data-index="3" aria-hidden="true">
+            <div class="slide-visual visual-d" aria-hidden="true">
+              <span class="glass-shape"></span>
+              <span class="glass-shape"></span>
+            </div>
+            <h2 class="slide-title">把每次修复沉淀成关系档案</h2>
+            <p class="slide-copy">
+              让你们看见变化趋势，
+              <br />
+              把争执变成更懂彼此的过程。
+            </p>
+          </article>
+        </section>
+
+        <footer class="onboarding-footer">
+          <div class="indicator-group" role="tablist" aria-label="引导进度">
+            <button class="indicator is-active" role="tab" data-index="0" aria-label="第1步"></button>
+            <button class="indicator" role="tab" data-index="1" aria-label="第2步"></button>
+            <button class="indicator" role="tab" data-index="2" aria-label="第3步"></button>
+            <button class="indicator" role="tab" data-index="3" aria-label="第4步"></button>
+          </div>
+          <div class="control-row">
+            <button class="secondary-btn" type="button" id="prevBtn">上一步</button>
+            <button class="primary-btn" type="button" id="nextBtn">下一步</button>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="./onboarding.js"></script>
+  </body>
+</html>
